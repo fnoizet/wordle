@@ -47,3 +47,18 @@ jobs:
       #  run: |
       #    echo Add other actions to build,
       #    echo test, and deploy your project.
+
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Go to build dir
+        run: cd ./build
+        
+      - name: sync files
+        uses: SamKirkland/FTP-Deploy-Action@4.3.2
+        with:
+          server: ftp.cluster030.hosting.ovh.net
+          username: ${{ secrets.OVH_FTP_USERNAME }}
+          password: ${{ secrets.OVH_FTP_PASSWORD }}
+          server-dir: ./wordle_test/
+      
