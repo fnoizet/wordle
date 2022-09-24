@@ -1,0 +1,11 @@
+.buttonZone {
+  margin: 10px;
+}
+
+.buttonZone button {
+  padding: 10px 15px;
+  background-color: #06c;
+  border: none;
+  border-radius: 3px;
+  color: #fff;
+}
