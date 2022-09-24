@@ -1,0 +1,59 @@
+body {
+  padding-bottom: 120px;
+}
+
+.VirtualKeyboard {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  bottom: 0px;
+  gap: 5px;
+  position: fixed;
+  width: 100vw;
+  background: #333;
+  padding: 10px;
+  z-index: 10;
+}
+
+.KBLines {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.KBActions {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.KBLine {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 5px;
+}
+
+.KBLetter {
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 20px;
+  cursor: pointer;
+  background: #ccc;
+}
+
+.KBActions .KBAction {
+  background: #ccc;
+  border: 1px solid #ccc;
+  text-align: center;
+  width: 60px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+}
