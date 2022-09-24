@@ -10,8 +10,8 @@ export default function () {
   return (
     <div className="langSelector">
       <select name="lang" onChange={handleChangeLang}>
-        <option value="FR">FR</option>
-        <option value="EN">EN</option>
+        <option value="FR">Français</option>
+        <option value="EN">English</option>
       </select>
     </div>
   );
