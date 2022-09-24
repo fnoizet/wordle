@@ -43,7 +43,7 @@ jobs:
         run: npm run build
         
       - name: Go to build dir
-        run: cd ./build
+        run: cd ./build/
         
       - name: sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
