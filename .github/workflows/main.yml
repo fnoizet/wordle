@@ -22,7 +22,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [12.x]
+        node-version: [16.15.0]
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -33,7 +33,7 @@ jobs:
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
-        node-version: ${{ matrix.node-version }}
+          node-version: ${{ matrix.node-version }}
 
       # Runs a single command using the runners shell
       - name: Install modules
