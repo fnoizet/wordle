@@ -5,8 +5,7 @@ import ListAttempts from "./components/ListAttempts";
 import Input from "./components/Input";
 import Restart from "./components/Restart";
 import Store from "./reducers/store";
-import LangSelector from "./components/LangSelector";
-import logo from "./assets/logo.jpg";
+import Header from "./components/Header";
 
 export default function App() {
   const [win, setWin] = useState(false);
@@ -17,8 +16,8 @@ export default function App() {
   const lastGuess = useSelector(
     (state) => state.guesses[state.guesses.length - 1]
   );
-  const lang = useSelector((state) => state.lang);
-
+  const lang = useSelector(state => state.lang)
+  
   useEffect(() => {
     Store.dispatch({ type: "RESTART" });
   }, []);
@@ -33,13 +32,7 @@ export default function App() {
 
   return (
     <div className="App">
-      <img src={logo} />
-      {lang === "EN" ? (
-        <h2>Start typing to find the word !</h2>
-      ) : (
-        <h2>Écrivez pour trouver le mot !</h2>
-      )}
-      <LangSelector />
+      <Header/>
       <ListAttempts wordToFind={wordToFind} guesses={guesses} />
       {!win && wordToFind && <Input length={wordToFind.length} />}
       {win && <div>{lang === "EN" ? "You win" : "Trouvé"} !</div>}
