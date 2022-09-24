@@ -41,12 +41,7 @@ jobs:
 
       - name: Build
         run: npm run build
-        
-      - name: Go to build dir
-        run: |
-          cd ./build/
-          ls -als
-        
+                
       - name: sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.2
         with:
@@ -54,7 +49,7 @@ jobs:
           username: ${{ secrets.OVH_FTP_USERNAME }}
           password: ${{ secrets.OVH_FTP_PASSWORD }}
           server-dir: ./wordle_test/
-          #local-dir: ./build/
+          local-dir: ./build/
 
       # Runs a set of commands using the runners shell
       #- name: Run a multi-line script
