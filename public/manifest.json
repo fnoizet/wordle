@@ -1,7 +1,7 @@
 {
     "name": "Wordle",
     "short_name": "Wordle",
-    "description": "A simple wordle game - by Fabien NOIZET",
+    "description": "Wordle - Touver le mot",
     "icons": [
         {
             "src": "/favicon/favicon-32x32.png",

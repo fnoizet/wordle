@@ -1,7 +1,7 @@
 {
   "name": "wordle",
   "version": "1.0.0",
-  "description": "",
+  "description": "Wordle - Trouver le mot",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
