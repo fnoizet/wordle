@@ -7,53 +7,50 @@ body {
   flex-direction: row;
   justify-content: center;
   bottom: 0px;
-  gap: 5px;
   position: fixed;
   width: 100vw;
   background: #333;
   padding: 10px;
   z-index: 10;
+  height: 150px;
+}
+
+.KBLines, .KBActions {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .KBLines {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.KBActions {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-grow: 10;
 }
 
 .KBLine {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  gap: 5px;
+  height: 33%;
+  line-height: 100%;
+  width: 100%;
 }
 
-.KBLetter {
-  border: 1px solid #ccc;
+.KBLetter,
+.KBActions .KBAction {
+  border: 1px solid #FFF3;
+  color: #FFF;
   text-align: center;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 5px;
   font-size: 20px;
   cursor: pointer;
-  background: #ccc;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .KBActions .KBAction {
-  background: #ccc;
-  border: 1px solid #ccc;
-  text-align: center;
-  width: 60px;
-  height: 30px;
-  line-height: 30px;
-  border-radius: 5px;
-  font-size: 18px;
-  cursor: pointer;
+  height:33%;
+}
+
+.KBLetter {
+  max-width:10%;
 }
